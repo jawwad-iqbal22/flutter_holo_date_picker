@@ -190,6 +190,28 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
         children: <Widget>[
           Positioned(
             child: Container(
+                margin: const EdgeInsets.only(top: 61),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    SizedBox(width: MediaQuery.of(context).size.width * 0.02),
+                    Expanded(
+                      child: Container(
+                        width: MediaQuery.of(context).size.width * 0.02,
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 7, vertical: 18),
+                        height: MediaQuery.of(context).size.height * 0.055,
+                        decoration: BoxDecoration(
+                            color: Colors.white.withOpacity(0.1),
+                            borderRadius: BorderRadius.circular(10)),
+                      ),
+                    ),
+                    SizedBox(width: MediaQuery.of(context).size.width * 0.02)
+                  ],
+                )),
+          ),
+          Positioned(
+            child: Container(
               padding: EdgeInsets.symmetric(horizontal: 7, vertical: 18),
               height: widget.pickerTheme!.pickerHeight,
               decoration:
@@ -216,30 +238,6 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
               ),
             ),
           ),
-          Positioned(
-            child: Container(
-                margin: const EdgeInsets.only(top: 61),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    SizedBox(width: MediaQuery.of(context).size.width * 0.02),
-                    Expanded(
-                      child: Container(
-                        width: MediaQuery.of(context).size.width * 0.02,
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 7, vertical: 18),
-                        height: MediaQuery.of(context).size.height * 0.055,
-                        decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.1),
-                          borderRadius: BorderRadius.circular(10)),
-                      ),
-                    ),
-                    SizedBox(width: MediaQuery.of(context).size.width * 0.02)
-                  ],
-                )),
-          ),
-     
-      
         ],
       ),
     );
